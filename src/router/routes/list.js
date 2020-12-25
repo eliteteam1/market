@@ -1,3 +1,4 @@
+
 import List from "@/views/List/List";
 
 var listRouter = {
@@ -6,3 +7,4 @@ var listRouter = {
 }
 
 export default listRouter;
+

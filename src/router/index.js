@@ -1,19 +1,19 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-// 导入路由模块
+Vue.use(VueRouter)
+import centerRouter from './routes/center'
+import mainRouter from './routes/main'
+import cartRouter from './routes/cart'
 import listRouter from './routes/list'
 
-Vue.use(VueRouter);
 
 const routes = [
-    // 注册路由模块
-    listRouter,
-    {
-      path: "/",
-      redirect: "/list",
-  }
-];
+  centerRouter,
+  mainRouter,
+  cartRouter,
+  listRouter
+]
 
 const router = new VueRouter({
     mode: "history",
