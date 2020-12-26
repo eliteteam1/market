@@ -24,33 +24,45 @@
         <div class="money">
             我的资产
         </div>
-        <div>
-            <van-tabbar v-model="active" :fixed="boolean">
-                <van-tabbar-item icon="orders-o">全部订单</van-tabbar-item>
-                <van-tabbar-item icon="peer-pay">待付款</van-tabbar-item>
-                <van-tabbar-item icon="logistics">待收货</van-tabbar-item>
-                <van-tabbar-item icon="passed">已完成</van-tabbar-item>
-            </van-tabbar>
+        <div class="moneylist">
+            <div>
+                <span>9999</span>
+                <p>总金额</p>
+            </div>
+            <div>
+                <span>9999</span>
+                <p>红包</p>
+            </div>
+            <div>
+                <span>9999</span>
+                <p>优惠券</p>
+            </div>
+            <div>
+                <span>9999</span>
+                <p>白条</p>
+            </div>
+            <div>
+                <span>9999</span>
+                <p>礼品卡</p>
+            </div>
         </div>
+
         <div>
             <van-grid :column-num="3">
-                <van-grid-item
-                    class="iconfont icon-74wodedingdan"
-                    text="我的订单"
-                />
-                <van-grid-item icon="photo-o" text="我的拼团" />
-                <van-grid-item icon="photo-o" text="微红包" />
-                <van-grid-item icon="photo-o" text="我的积分" />
-                <van-grid-item icon="photo-o" text="我的金卡" />
-                <van-grid-item icon="photo-o" text="退款/售后" />
-                <van-grid-item icon="photo-o" text="地址管理" />
-                <van-grid-item icon="photo-o" text="账号安全" />
-                <van-grid-item icon="photo-o" text="联系客服" />
-                <van-grid-item icon="photo-o" text="产品反馈" />
-                <van-grid-item icon="photo-o" text="帮助中心" />
+                
+                <van-grid-item icon="orders-o" text="我的订单" />
+                <van-grid-item icon="goods-collect-o" text="我的拼团" />
+                <van-grid-item icon="bill-o" text="微红包" />
+                <van-grid-item icon="star-o" text="我的积分" />
+                <van-grid-item icon="vip-card-o" text="我的金卡" />
+                <van-grid-item icon="refund-o" text="退款/售后" />
+                <van-grid-item icon="location-o" text="地址管理" />
+                <van-grid-item icon="flag-o" text="账号安全" />
+                <van-grid-item icon="service-o" text="联系客服" />
+                <van-grid-item icon="warning-o" text="产品反馈" />
+                <van-grid-item icon="question-o" text="帮助中心" />
             </van-grid>
         </div>
-        
     </div>
 </template>
 <script>
@@ -111,5 +123,24 @@ export default {
     line-height: 40px;
     margin-left: 20px;
     border-bottom: 1px solid black;
+}
+.moneylist {
+    height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.6rem;
+}
+.moneylist div{
+    float: left;
+    text-align: center;
+}
+.moneylist span{
+    font-size: 1rem;
+}
+.moneylist p{
+    margin: 0;
 }
 </style>
