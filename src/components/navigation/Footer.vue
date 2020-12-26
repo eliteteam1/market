@@ -19,8 +19,12 @@ export default {
     data() {
         return {
             active: 0,
-            url:["/main", "/list", "/cart", "center"]
+            url:["/main", "/list", "/cart", "/center"]
         };
+    },
+    created(){
+        //纠正底部索引
+        this.active = this.url.indexOf(this.$route.path)
     },
     methods:{
         changeTab(index){
