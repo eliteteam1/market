@@ -1,5 +1,5 @@
 
-import Main from '@/views/Main'
+import Main from '@/views/Main/Main'
 
 var mainRouter = {path:"/main", component:Main};
 

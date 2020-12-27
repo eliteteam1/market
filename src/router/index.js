@@ -9,10 +9,11 @@ import listRouter from './routes/list'
 
 
 const routes = [
-  centerRouter,
+  ...centerRouter,
   mainRouter,
   cartRouter,
-  listRouter
+  listRouter,
+  {path: '/' , redirect:'/main' }
 ]
 
 const router = new VueRouter({

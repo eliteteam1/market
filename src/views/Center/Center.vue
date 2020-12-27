@@ -12,8 +12,8 @@
                 />
             </div>
             <div class="info">
-                <div>
-                    路飞
+                <div @click="login">
+                    登录
                 </div>
                 <div>
                     超级会员
@@ -68,7 +68,7 @@
 <script>
 import Vue from "vue";
 import { Tabbar, TabbarItem, Icon, Grid, GridItem } from "vant";
-import "../assets/icon_zhuo/iconfont.css";
+import "../../assets/icon_zhuo/iconfont.css";
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -82,6 +82,11 @@ export default {
             boolean: false,
         };
     },
+    methods:{
+        login(){
+            this.$router.push('/login')
+        }
+    }
 };
 </script>
 

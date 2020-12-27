@@ -1,4 +1,4 @@
-import List from '@/views/List'
+import List from '@/views/Lists/List'
 
 const listRouter = {path:"/list", component:List}
 
