@@ -1,5 +1,15 @@
-import List from '@/views/Lists/List'
+import List from "@/views/Lists/List";
+import Detail from "@/views/Lists/Detail";
 
-const listRouter = {path:"/list", component:List}
+var listRouter = [
+    {
+        path:'/list',
+        component:List
+    },
+    {
+        path:'/detail/:productId',
+        component:Detail
+    }
+]
 
-export default listRouter
+export default listRouter;

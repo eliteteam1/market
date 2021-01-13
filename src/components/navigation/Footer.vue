@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             active: 0,
-            url:["/main", "/list", "/cart", "/center"]
+            url:["/home", "/list", "/cart", "/center"]
         };
     },
     created(){
@@ -31,7 +31,29 @@ export default {
             // console.log(index);
             this.$router.push(this.url[index])
         }
-    }
+    },
+     watch: {
+        $route: function() {
+            if (this.$route.path == "/home") {
+                this.active = 0;
+            }
+            if (this.$route.path == "/list") {
+                this.active = 1;
+            }
+            if (this.$route.path == "/cart") {
+                this.active = 2;
+            }
+            if (this.$route.path == "/center") {
+                this.active = 3;
+            }
+            if (this.$route.path == "/zeng") {
+                this.active = -1;
+            }
+            if (this.$route.path == "/youhui") {
+                this.active = -1;
+            }
+        },
+    }, 
 };
 </script>
 
